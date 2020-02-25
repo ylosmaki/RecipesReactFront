@@ -3,7 +3,7 @@ import React from "react"
 function Results() {
     return (
         <div>
-            <p>Shows results</p>
+            <p>Shows results in case we have some</p>
         </div>
     )
 }
