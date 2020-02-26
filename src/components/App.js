@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
         <Header /> {/*Header and stuff*/}
-        <Sidebar /> {/*meals*/}
         <Search /> {/*what do you want to search from database*/}
+        <Sidebar /> {/*meals*/}
         <Results /> {/*recipes and search result*/}
         <Footer /> {/*footer if we need one*/}
 
