@@ -3,10 +3,12 @@ import React from "react"
 function Sidebar() {
     return (
         <div className={"sidebar"}>
-            <p>Meal1</p>
-            <p>Meal2</p>
-            <p>Meal3</p>
-            <p>Meal4</p>
+            <ul>
+                <li><a>Meal1</a></li>
+                <li><a>Meal2</a></li>
+                <li><a>Meal3</a></li>
+                <li><a>Meal4</a></li>
+            </ul>
         </div>
     )
 }
