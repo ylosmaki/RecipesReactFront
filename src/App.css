@@ -66,8 +66,8 @@
 }
 
 .footer {
-  text-align: end;
-  padding: 10px 20px;
+  font-size: smaller;
+  text-align: center;
 }
 
 .clickable:hover {

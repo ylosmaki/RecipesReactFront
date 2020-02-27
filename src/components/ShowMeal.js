@@ -3,7 +3,9 @@ import React, {Component} from "react"
 
 class ShowMeal extends Component {
     meWasClicked = () => {
+/*
         console.log("Clicked me, id", this.props.list.id)
+*/
         this.props.selectMeal(this.props.list.id);
     }
     render () {
