@@ -15,10 +15,14 @@ class App extends React.Component{
                 {meals: response}))
     }
     selectMeal = (id) => {
+/*
         console.log("Selecting meal", id)
+*/
         for(let m of this.state.meals) {
             if(m.id === id) {
+/*
                 console.log("Found a match", m)
+*/
                 this.setState({selectedMeal: m});
                 return
             }
