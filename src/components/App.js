@@ -5,6 +5,8 @@ import Sidebar from "./Sidebar"
 import Search from "./Search"
 import Results from "./Results"
 import Footer from "./Footer"
+import NewMealForm from "./NewMealForm";
+import NewIngredientsForm from "./newIngredientsForm";
 
 class App extends React.Component{
     state = {meals : [], selectedMeal: null}
@@ -35,6 +37,8 @@ class App extends React.Component{
         <Search /> {/*what do you want to search from database*/}
         <Sidebar meals={this.state.meals} selectMeal={this.selectMeal}/> {/*meals*/}
         <Results meal={this.state.selectedMeal}/> {/*recipes and search result*/}
+        <NewMealForm />
+        <NewIngredientsForm />
         <Footer /> {/*footer if we need one*/}
 
     </div>
