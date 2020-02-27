@@ -12,7 +12,7 @@ function App() {
     <div className="App">
         <Header /> {/*Header and stuff*/}
         <Search /> {/*what do you want to search from database*/}
-        <IngredientSearch />
+        <IngredientSearch /> {/*ingredient search*/}
         <Sidebar /> {/*meals*/}
         <Results /> {/*recipes and search result*/}
         <Footer /> {/*footer if we need one*/}

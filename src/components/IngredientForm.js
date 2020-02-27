@@ -1,9 +1,9 @@
 import React from "react";
 
-const IngredientForm = props => (
-    <form onSubmit={props.getRecipe}>
-        <input type="text" name="recipeName"/>
+const Form = props => (
+    <form onSubmit={props.getMeal}>
+        <input type="text" name="ingredientName"/>
         <button>Ingredient Search</button>
     </form>
 );
-export default IngredientForm;
+export default Form;

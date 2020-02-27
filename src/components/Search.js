@@ -4,33 +4,33 @@ import Form from "./Form";
 class Search extends Component {
 
     state = {
-        recipes: []
+        meals: []
     }
 
-    getRecipe = async (e) => {
-        const recipeName = e.target.elements.recipeName.value;
+    getMeal = async (e) => {
+        const mealName = e.target.elements.mealName.value;
         e.preventDefault();
-        console.log(recipeName);
-        const api_call = await fetch('http://localhost:8080/api/meals/' + recipeName);
+        console.log(mealName);
+        const api_call = await fetch('http://localhost:8080/api/meals/' + mealName);
 
         const data = await api_call.json();
-        this.setState({recipes: data});
-        console.log(this.state.recipes);
+        this.setState({meals: data});
+        console.log(this.state.meals);
 
     }
 
     render() {
         return (
             <div className={"search"}>
-                <Form getRecipe={this.getRecipe}/>
-                {this.state.recipes.map((recipe)=>{
+                <Form getMeal={this.getMeal}/>
+                {this.state.meals.map((meal)=>{
                     return (
                         <div>
-                            <p key={recipe.id}>
-                                Title: {recipe.name}
-                                Portions: {recipe.portions}
-                                Ingredients: {recipe.ingredients.map((ingredient)=>(
-                                    ingredient.name+", "))}</p>
+                            <ul key={meal.id}>
+                              <li> Title: {meal.name}</li>
+                               <li> Portions: {meal.portions}</li>
+                            <li> Ingredients: <ul>{meal.ingredients.map((ingredient)=>(
+                                <li key={ingredient.id}>{ingredient.name}</li>))}</ul></li> </ul>
 
                         </div>
                     );

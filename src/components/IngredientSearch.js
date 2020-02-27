@@ -1,32 +1,32 @@
 import React, {Component} from "react"
-import IngredientForm from "./IngredientForm";
+import Form from "./IngredientForm";
 
 class IngredientSearch extends Component {
 
     state = {
-        recipes: []
+        ingredients: []
     }
 
-    getRecipe = async (e) => {
-        const recipeName = e.target.elements.recipeName.value;
+    getMeal = async (e) => {
+        const ingredientName = e.target.elements.ingredientName.value;
         e.preventDefault();
-        console.log(recipeName);
-        const api_call = await fetch('http://localhost:8080/api/meals/' + recipeName);
+        console.log(ingredientName);
+        const api_call = await fetch('http://localhost:8080/api/ingredients/' + ingredientName);
 
         const data = await api_call.json();
-        this.setState({recipes: data});
-        console.log(this.state.recipes);
+        this.setState({ingredients: data});
+        console.log(this.state.ingredients);
 
     }
 
     render() {
         return (
-            <div className={"search"}>
-                <IngredientForm getRecipe={this.getRecipe}/>
-                {this.state.recipes.map((recipe)=>{
+            <div className={"ingredientsearch"}>
+                <Form getMeal={this.getMeal}/>
+                {this.state.ingredients.map((mealname)=>{
                     return (
                         <div>
-                            <p key={recipe.id}>Title: {recipe.name} Portions: {recipe.portions}</p>
+                            <ul>{mealname}</ul>
 
                         </div>
                     );
