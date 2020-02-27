@@ -1,14 +1,10 @@
 import React from "react"
+import Mealbar from "./Mealbar"
 
-function Sidebar() {
+function Sidebar(props) {
     return (
         <div className={"sidebar"}>
-            <ul>
-                <li><a>Meal1</a></li>
-                <li><a>Meal2</a></li>
-                <li><a>Meal3</a></li>
-                <li><a>Meal4</a></li>
-            </ul>
+            <Mealbar {...props}/>
         </div>
     )
 }
