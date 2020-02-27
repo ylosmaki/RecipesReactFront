@@ -1,7 +1,7 @@
 import React, {Component} from "react"
-import Form from "./Form";
+import IngredientForm from "./IngredientForm";
 
-class Search extends Component {
+class IngredientSearch extends Component {
 
     state = {
         recipes: []
@@ -22,23 +22,19 @@ class Search extends Component {
     render() {
         return (
             <div className={"search"}>
-                <Form getRecipe={this.getRecipe}/>
+                <IngredientForm getRecipe={this.getRecipe}/>
                 {this.state.recipes.map((recipe)=>{
                     return (
                         <div>
-                            <p key={recipe.id}>
-                                Title: {recipe.name}
-                                Portions: {recipe.portions}
-                                Ingredients: {recipe.ingredients.map((ingredient)=>(
-                                    ingredient.name+", "))}</p>
+                            <p key={recipe.id}>Title: {recipe.name} Portions: {recipe.portions}</p>
 
                         </div>
                     );
 
-                    })}
+                })}
 
             </div>
         );
     }
 }
-export default Search
+export default IngredientSearch
