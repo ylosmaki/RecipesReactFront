@@ -68,7 +68,20 @@
 }
 
 .footer {
-  text-align: end;
-  padding: 10px 20px;
+  font-size: smaller;
+  text-align: center;
 }
 
+.clickable:hover {
+  cursor: pointer;
+  background-color: #FFBAC3;
+
+}
+
+.results ul {
+  list-style-type: none;
+}
+
+.meals {
+  padding: 20px;
+}
